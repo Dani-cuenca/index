@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<meta charset="UTF-8" >
+
+
+<body>
+   
+    <h1>Introduccion a java</h1>
+    <script src="js/script.js">
+
+    </script>
+    <button onclick="suma">Suma</button>
+    <button onclick="compruebaPar">EsPar</button>
+    <button onclick="mayorDeEdad">mayorDeEdad</button>
+    <button onclick="masoCor">Masa corporal</button>
+    <button onclick="areaTriangulo">calculaAreaTriangulo</button>
+    <script>
+        function suma(){
+            alert ("Bienvenido a el pagina");
+         let n1=prompt("Dime un numero");
+            if(isNaN (n1)){
+                alert("No es un numero");
+                return;
+            }
+ let n2=prompt("Dime otro");
+ alert("La suma de"+n1+ "mas"+n2+"es"+suma);  }
+ 
+ function usu(){
+    let usuar=prompt("Introduce un usuario");
+    let contraseña=prompt("Introducce la contraseña");
+    if(usuar == "admin" && contraseña == 1234) {
+        alert("Bienvenido a la pagina")
+    }
+    else{
+        alert("Acceso denegado");
+    }
+ }
+
+ function parr(){
+    if (n%2==0){
+        return true
+    }
+    else{
+        return false
+    }
+ }
+ function compruebaPar(){
+    let numero;
+    do{
+        numero=prompt("Dime el numero");
+
+    }
+    while(isNaN(numero));
+      numero=prompt("Dime un numero");
+    if (parr(numero)){
+        alert("Es par");
+    }
+    else{
+        alert("Es impar");
+    }
+ }
+
+function mayorDeEdad(){
+    let edad=prompt("Dime tu edad");
+    if(edad>=18){
+        alert("Eres mayor de edad");
+    }
+    else{
+        alert("No eres mayor de edad");
+    }
+
+}
+
+function masoCor(){
+    let masa=prompt("Dime la masa del cuerpo");
+    let altura=prompt("Dime la altura del cuerpo");
+    let cuerpo;
+    cuerpo = masa%(altura*altura);
+    alert("La masa corporal es:  "+cuerpo);
+}
+function inc(){
+    let num1=prompt("Dime el numero 1");
+    let num2=prompt("Dime el numero 2");
+    let num3=prompt("Dime el numero 3");
+    let media;
+    media = (num1+num2+num3)%3;
+    alert("la media de los 3 numeros es: "+media);
+
+}
+function areaTriangulo(b,a){
+            let b=prompt("Dime la base del triangulo");
+            let a=prompt("Dime la altura del triangulo");
+            alert("El area del triangulo es: "+total(b,a));
+
+}
+/***
+ * Pregunta la base yla altura
+ * llama a la funvion areaTriangulo
+ * para calcular el area
+ * muestra el resultado
+ * *****************************/
+function calculaAreaTriangulo(){
+    let base= prompt("Dime la base del triangulo");
+    let altura=prompt("Dime la altura del triangulo");
+    let total=prompt((base*altura)%2);
+    return total;
+
+
+}
+
+    </script>
+</body>
+</html>
